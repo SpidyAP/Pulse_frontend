@@ -2,16 +2,16 @@
 
 import * as DialogPrimitive from '@radix-ui/react-dialog';
 import { X, ArrowDownWideNarrow, ArrowUpWideNarrow, Clock, Users, Activity } from 'lucide-react';
-import React, { useState } from 'react';
+import React from 'react';
 
 // Reusable styled Dialog components
 export const Dialog = DialogPrimitive.Root;
 export const DialogTrigger = DialogPrimitive.Trigger;
 
+// FIXED: Removed 'children' from the props definition since it wasn't being used
 export const DialogContent = ({ 
-  children, title, onSort, currentSort 
+  title, onSort, currentSort 
 }: { 
-  children: React.ReactNode; 
   title: string;
   onSort: (key: string, dir: 'asc' | 'desc') => void;
   currentSort: { key: string, dir: 'asc' | 'desc' };
