@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. LOCK THE VIEWPORT */
+/* This prevents the entire browser page from scrolling */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-color: #0a0b0d;
+}
+
+/* 2. CUSTOM SCROLLBARS (Applied to elements with overflow-auto) */
+/* Works on Chrome, Edge, Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0E1114;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2a2d36;
+  border-radius: 9999px;
+  border: 1px solid #0E1114; /* Adds a tiny border for separation */
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* Firefox Scrollbar Support */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #2a2d36 #0E1114;
+}
+
+/* Shimmer Animation Keyframes */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
