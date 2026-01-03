@@ -1,6 +1,6 @@
 'use client';
 import React, { memo } from 'react';
-import { Token } from '@/lib/features/tokenSlice';
+import { PulseToken as Token } from '@/lib/features/tokenSlice'
 import { formatCurrency, cn } from '@/lib/utils';
 import { Copy, Globe, Twitter, Send, Search, ShieldCheck } from 'lucide-react';
 
